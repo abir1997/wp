@@ -15,7 +15,6 @@ function minusValue() {
 
 function check() {
     if (value <= 0) {
-        alert("asd");
         window.event.preventDefault();
     }
 }
