@@ -12,7 +12,11 @@
     <!-- Font awesome integration-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
+<<<<<<< HEAD
     <link id='stylecss' type="text/css" rel="stylesheet" href="../css/style.CSS">
+=======
+    <link id='stylecss' type="text/css" rel="stylesheet" href="../css/style.css">
+>>>>>>> 687ec9749a18e288b8bbc35e6d5ad0597433ca9e
 
     <script src='../../wireframe.js'></script>
     <script src="../js/mainscript.js"></script>

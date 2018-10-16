@@ -60,10 +60,28 @@ header img {
 }
 
 /* LoVe HAte */
+<<<<<<< HEAD
 a:link {color:#222;}
 a:visited{color: #333;}
 a:hover {color:black;}
 a:active{color:#E60028;}
+=======
+a:link {
+    color: #222;
+}
+
+a:visited {
+    color: #333;
+}
+
+a:hover {
+    color: black;
+}
+
+a:active {
+    color: #E60028;
+}
+>>>>>>> 687ec9749a18e288b8bbc35e6d5ad0597433ca9e
 
 /*Original CSS code sourced and adapted for educational purposes: https://www.w3schools.com/howto/howto_js_responsive_navbar_dropdown.asp */
 .topnav {
@@ -269,9 +287,17 @@ footer ul li a {
 footer ul {
     list-style: none;
 }
+<<<<<<< HEAD
 footer a:link{
     color: white;
 }
+=======
+
+footer a:link {
+    color: white;
+}
+
+>>>>>>> 687ec9749a18e288b8bbc35e6d5ad0597433ca9e
 .jobs {
     margin-left: 5%;
 }
@@ -284,6 +310,7 @@ h2 {
 footer ul li {
     padding-top: 5%;
 }
+<<<<<<< HEAD
 footer a:link{
     color: white;
 }
@@ -296,6 +323,25 @@ footer a:hover{
 footer a:active{
     color: #000;
 }
+=======
+
+footer a:link {
+    color: white;
+}
+
+footer a:visited {
+    color: whitesmoke;
+}
+
+footer a:hover {
+    color: whitesmoke;
+}
+
+footer a:active {
+    color: #000;
+}
+
+>>>>>>> 687ec9749a18e288b8bbc35e6d5ad0597433ca9e
 .container a {
     text-decoration: none;
     color: black;
@@ -348,6 +394,7 @@ footer a:active{
     padding: 2% 0%;
 }
 
+<<<<<<< HEAD
 .quantityBox input[type=button]{
     padding: 11px;
     border: 1px solid #ccc;
@@ -355,6 +402,15 @@ footer a:active{
 }
 
 .bigText select,input[type=number]{
+=======
+.quantityBox input[type=button] {
+    padding: 11px;
+    border: 1px solid #ccc;
+}
+
+.bigText select,
+input[type=number] {
+>>>>>>> 687ec9749a18e288b8bbc35e6d5ad0597433ca9e
     width: 50%;
     padding: 12px 10px;
     margin: 8px 0;
@@ -362,16 +418,29 @@ footer a:active{
     box-sizing: border-box;
     text-align: center;
 }
+<<<<<<< HEAD
 .bigText input[type=number]
 {
     width: 30%;
     padding: 12px 5px; 
 }
+=======
+
+.bigText input[type=number] {
+    width: 30%;
+    padding: 12px 5px;
+}
+
+>>>>>>> 687ec9749a18e288b8bbc35e6d5ad0597433ca9e
 .bigText h2 {
     font-family: inherit;
 }
 
+<<<<<<< HEAD
 .bigText{
+=======
+.bigText {
+>>>>>>> 687ec9749a18e288b8bbc35e6d5ad0597433ca9e
     margin-right: 7%;
     text-align: center;
 }
@@ -413,9 +482,17 @@ input[type=submit] {
 input[type=submit]:hover {
     background-image: linear-gradient(to bottom left, #333, #222);
 }
+<<<<<<< HEAD
 h1{
     color: #222;
 }
+=======
+
+h1 {
+    color: #222;
+}
+
+>>>>>>> 687ec9749a18e288b8bbc35e6d5ad0597433ca9e
 #log input {
     width: 100%;
     padding: 12px 20px;

@@ -12,7 +12,11 @@
     <!-- Font awesome integration-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
+<<<<<<< HEAD
     <link id='stylecss' type="text/css" rel="stylesheet" href="../css/style.CSS">
+=======
+    <link id='stylecss' type="text/css" rel="stylesheet" href="../css/style.css">
+>>>>>>> 687ec9749a18e288b8bbc35e6d5ad0597433ca9e
 
     <script src='../../wireframe.js'></script>
     <script src="../js/mainscript.js"></script>
@@ -112,7 +116,12 @@
             </div>
 
 
+<<<<<<< HEAD
         </div><!--End of container-->
+=======
+        </div>
+        <!--End of container-->
+>>>>>>> 687ec9749a18e288b8bbc35e6d5ad0597433ca9e
         <div class="container">
 
             <div class="holder">
@@ -146,6 +155,7 @@
             </div>
 
 
+<<<<<<< HEAD
         </div><!--End of container-->
 
         <div class="container">
@@ -182,10 +192,51 @@
 
 
 </div><!--End of container-->
+=======
+        </div>
+        <!--End of container-->
+
+        <div class="container">
+
+            <div class="holder">
+                <!-- Original image below sourced for educational purposes: https://www.pexels.com/photo/sea-fashion-beach-sand-33622/ -->
+                <a href="#"><img src="../../../media/hat1.jpg"></a><br>
+                <div class="info">
+                    <p>Armani</p>
+                    <a href="#">Blue hat</a><br>
+                    <p>$79.99</p>
+                </div>
+            </div>
+
+            <div class="holder">
+                <!-- Original image below sourced for educational purposes: https://www.pexels.com/photo/fashion-hat-8333/ -->
+                <a href="#"><img src="../../../media/hat2s.jpg"></a><br>
+                <div class="info">
+                    <p>Gucci</p>
+                    <a href="#">Brown hat</a><br>
+                    <p><span>$55.25</span>&nbsp; &nbsp;<strike>$99.25</strike></p>
+                </div>
+            </div>
+
+            <div class="holder">
+                <!-- Original image below sourced for educational purposes: https://www.pexels.com/photo/man-wearing-brown-dress-shirt-holding-white-fedora-hat-1036627/ -->
+                <a href="#"><img src="../../../media/hat3.jpg"></a><br>
+                <div class="info">
+                    <p>Nike</p>
+                    <a href="#">Brownish hat</a>
+                    <p>$89.99</p>
+                </div>
+            </div>
+
+
+        </div>
+        <!--End of container-->
+>>>>>>> 687ec9749a18e288b8bbc35e6d5ad0597433ca9e
     </main>
 
     <br>
     <footer>
+<<<<<<< HEAD
     <div class="flex-container">
 
 <div class="sign">
@@ -213,6 +264,35 @@
 </div>
 </div>
 <!--End of flex-container-->
+=======
+        <div class="flex-container">
+
+            <div class="sign">
+                <ul>
+                    <li><a href="#"><i class="fa fa-facebook-f"></i> &nbsp;&nbsp;Facebook</a></li>
+                    <li><a href="#"><i class="fa fa-instagram"></i> &nbsp;&nbsp;Instagram</a></li>
+                    <li><a href="#"><i class="fa fa-twitter"></i> &nbsp;&nbsp;Twitter</a></li>
+                </ul>
+            </div>
+
+            <div class="jobs">
+                <ul>
+                    <li><a href="#">Careers</li></a>
+                    <li><a href="#">Contact us</li></a>
+                    <li><a href="#">Payment & Delivery</li></a>
+                </ul>
+            </div>
+
+            <div class="third">
+                <ul>
+                    <li><a href="#">Stores and hours</li></a>
+                    <li><a href="#">Terms and conditions</li></a>
+                    <li><a href="#">Returns and exchanges</li></a>
+                </ul>
+            </div>
+        </div>
+        <!--End of flex-container-->
+>>>>>>> 687ec9749a18e288b8bbc35e6d5ad0597433ca9e
         <hr>
         <div>&copy;<script>
                 document.write(new Date().getFullYear());

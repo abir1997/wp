@@ -12,7 +12,11 @@
     <!-- Font awesome integration-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
+<<<<<<< HEAD
     <link id='stylecss' type="text/css" rel="stylesheet" href="../css/style.CSS">
+=======
+    <link id='stylecss' type="text/css" rel="stylesheet" href="../css/style.css">
+>>>>>>> 687ec9749a18e288b8bbc35e6d5ad0597433ca9e
 
     <script src='../../wireframe.js'></script>
     <script src="../js/mainscript.js"></script>
@@ -78,6 +82,7 @@
         </div>
     </nav>
 
+<<<<<<< HEAD
 <main>
     <div class="flex-container" id="big">
 
@@ -140,6 +145,71 @@
 </div>
 </div>
 <!--End of flex-container-->
+=======
+    <main>
+        <div class="flex-container" id="big">
+
+            <div id="picHolder">
+                <!-- Original image below sourced for educational purposes: https://www.pexels.com/photo/black-haired-man-wearing-black-sunglasses-and-black-leather-jacket-157966/ -->
+                <img src="../../../media/big.jpg">
+            </div>
+
+            <div class="bigText">
+                <small>Product code : 02XXS1</small>
+                <h1>Swede Jacket in black</h1>
+                <h2>$79.99</h2>
+                <form action="https://titan.csit.rmit.edu.au/~e54061/wp/processing.php" method="post">
+                    <input type="hidden" id="porductID" name="id" value="02XXS1">
+                    <label for="size">Size:</label><br>
+                    <select id="size" name="option">
+                        <option value="small">Small</option>
+                        <option value="large">Large</option>
+                    </select>
+                    <div class="quantityBox">
+                        <label>Quantity:</label><br>
+                        <input type="button" value="-" id="minus" field="quantity" onclick="minusValue()">
+                        <input type='number' name='qty' value='0' min=1 id='qty'>
+                        <input type="button" value="+" id="plus" field="quantity" onclick="plusValue()">
+
+                        <input type="submit" value="Add to Bag" onclick="check()">
+                    </div>
+                </form>
+                <p>Made from unicorn flesh, this jacket provides<br>ample protection against the seasons</p>
+            </div>
+
+        </div>
+        <!--End of flex-container-->
+    </main>
+
+    <footer>
+        <div class="flex-container">
+
+            <div class="sign">
+                <ul>
+                    <li><a href="#"><i class="fa fa-facebook-f"></i> &nbsp;&nbsp;Facebook</a></li>
+                    <li><a href="#"><i class="fa fa-instagram"></i> &nbsp;&nbsp;Instagram</a></li>
+                    <li><a href="#"><i class="fa fa-twitter"></i> &nbsp;&nbsp;Twitter</a></li>
+                </ul>
+            </div>
+
+            <div class="jobs">
+                <ul>
+                    <li><a href="#">Careers</li></a>
+                    <li><a href="#">Contact us</li></a>
+                    <li><a href="#">Payment & Delivery</li></a>
+                </ul>
+            </div>
+
+            <div class="third">
+                <ul>
+                    <li><a href="#">Stores and hours</li></a>
+                    <li><a href="#">Terms and conditions</li></a>
+                    <li><a href="#">Returns and exchanges</li></a>
+                </ul>
+            </div>
+        </div>
+        <!--End of flex-container-->
+>>>>>>> 687ec9749a18e288b8bbc35e6d5ad0597433ca9e
         <hr>
         <div>&copy;<script>
                 document.write(new Date().getFullYear());
