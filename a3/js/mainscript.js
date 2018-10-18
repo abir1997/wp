@@ -37,6 +37,20 @@ function myFunction() {
     }
 }
 
+function showVisa()
+{
+    var value = document.getElementById('card').value;
+	value = value.replace(/ /g,'');
+	var pattern = new RegExp("^4[0-9]{12,15}$");
+	var result = pattern.test(value);
+	if(result==true) {
+		document.getElementById('visaLogo').style.visibility = "visible";
+	}
+	else {
+		document.getElementById('visaLogo').style.visibility = "hidden";
+	}
+}
+
 function updatePrice() {
 
     var qty=document.getElementById("qty").value;
@@ -47,17 +61,3 @@ function updatePrice() {
 	 document.getElementById("subtotal").innerHTML ="$"+subtotal.toFixed(2);
 }
 
-function showVisa()
-{
-    var value = document.getElementById('card').value;
-	value = value.replace(/ /g,'');
-	var pattern = new RegExp("^4[0-9]{12,15}$");
-	var result = pattern.test(value);
-	
-	if(result==true) {
-		document.getElementById('visaLogo').style.visibility = "visible";
-	}
-	else {
-		document.getElementById('visaLogo').style.visibility = "hidden";
-	}
-}
