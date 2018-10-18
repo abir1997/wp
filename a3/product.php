@@ -1,4 +1,5 @@
 <?php
+session_start();
 include_once('tools.php');
 $id ="";
  if (isset($_GET['id'])){
@@ -11,6 +12,7 @@ $id ="";
 <div class="flex-container" id="big">
 
  <?php
+ 
 	$filename="products.txt";
 	$delimiter="\t";
 	
@@ -19,7 +21,8 @@ $id ="";
 
     $header = NULL;
     $data = array();
-	$index=0;
+    $index=0;
+    $found=false;
 	try{
     if (($handle = fopen($filename, 'r')) !== FALSE)
     {
@@ -35,25 +38,27 @@ $id ="";
                 $data[$index] = array_combine($header, $row);
 				if($data[$index]["ID"]==$id)
 				{
-					$product=$data[$index];
+                    $product=$data[$index];
+                    $found=true;
 					break;
 				}
 				$index = $index+1;
-				//if($index == 2)
-					//break;
 				
 			}
 			
         }
 	}
 	//echo print_r($product);
-	//		echo "<br>";
 	}
 	catch(Exception $e)
 				{
 				}
         fclose($handle);
-    
+    if($found==false)
+    {
+        header('Location: products.php');
+    }
+    $_SESSION["products"] = $product;
 	
 ?>
 
@@ -67,8 +72,8 @@ $id ="";
         <small>Product code : <?php echo $product['ID']; ?> </small>
         <h1><?php echo $product["Title"] ?></h1>
         <h2>$<?php echo $product['Price'] ?></h2>
-        <form action="cart.php" method="post" onsubmit='return validate();'>
-            <input type="hidden" id="porductID" name="<?php echo $product['ID'] ?>" value="02XXS1">
+        <form action="cart.php" method="post">
+            <input type="hidden" id="ID" name="ID" value="<?php echo $product['ID'] ?>">
             <strong>Total Price :</strong> <p id="price" value="80"><?php echo $product['Price']; ?><p>
             <label for="size">Size:</label><br>
             <select id="size" name="option">

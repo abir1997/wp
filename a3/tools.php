@@ -3,7 +3,7 @@
     {
         ini_set('display_errors', 'On');
         error_reporting(E_ALL);
-        session_start();
+    
         $output = <<< "HTMLTOP"
         <!DOCTYPE html>
         <html lang='en'>
@@ -135,13 +135,45 @@ HTMLTOP;
     
     </html>
 HTMLFOOT;
+        
         echo $output;
+       debug();
     }
 
-
-    function validate()
+    function preShow( $arr, $returnAsString=false ) {
+        $ret  = '<pre>' . print_r($arr, true) . '</pre>';
+        if ($returnAsString)
+          return $ret;
+        else 
+          echo $ret; 
+      }
+      
+      
+      function printMyCode() {
+        $lines = file($_SERVER['SCRIPT_FILENAME']);
+        echo "<pre class='mycode'>\n";
+        foreach ($lines as $lineNo => $lineOfCode)
+           printf("%3u: %1s \n", $lineNo, rtrim(htmlentities($lineOfCode)));
+        echo "</pre>";
+      }
+      
+      
+    function debug()
     {
-        
+            preShow($_POST);
+            preShow($_SESSION);
+            if(isset($product))
+            {
+                preShow($product);
+            }
+            if(isset($_SESSION["cart"]))
+            {
+                preShow($_SESSION["cart"]);
+            }
+            if(isset($data))
+            {
+                preShow($data);
+            }
     }
 
 
