@@ -137,6 +137,7 @@ HTMLTOP;
 HTMLFOOT;
         
         echo $output;
+        echo "Link to my products and orders : <a href='products.txt'>Products</a> &nbsp; <a href = 'orders.txt'>Orders</a>";
        debug();
     }
 

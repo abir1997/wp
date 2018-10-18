@@ -48,7 +48,6 @@ $id ="";
 			
         }
 	}
-	//echo print_r($product);
 	}
 	catch(Exception $e)
 				{
@@ -71,10 +70,10 @@ $id ="";
     <div class="bigText">
         <small>Product code : <?php echo $product['ID']; ?> </small>
         <h1><?php echo $product["Title"] ?></h1>
-        <h2>$<?php echo $product['Price'] ?></h2>
+        <h2 id="price"><?php echo $product['Price'] ?></h2>AU$
         <form action="cart.php" method="post">
             <input type="hidden" id="ID" name="ID" value="<?php echo $product['ID'] ?>">
-            <strong>Total Price :</strong> <p id="price" value="80"><?php echo $product['Price']; ?><p>
+            <strong>Total Price :</strong><p id="subtotal">0<p>
             <label for="size">Size:</label><br>
             <select id="size" name="option">
                 <option value="small">Small</option>

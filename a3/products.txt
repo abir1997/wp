@@ -1,5 +1,5 @@
 ID	OID	Title	Description	Option	Price	Img name
-p01	SML	Swede Leather	Men's black jacket..	small	80.00	jacket1.jpg
-p02	SML	Gucci Jacket	Gucci Jacket black..	small	60.30	jacket2.jpg
+p01	SML	Swede Leather	Men's black jacket..	small	80.10	jacket1.jpg
+p02	SML	Gucci Jacket	Gucci Jacket black..	small	60.32	jacket2.jpg
 p03	SML	Yellow Jacket	Nike Yellow jacket..	small	45.50	jacket3.jpg
 

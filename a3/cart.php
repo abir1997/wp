@@ -11,8 +11,6 @@
   {
     $products["Qty"]=$_POST["qty"];
     $_SESSION['cart'][]=$products;
-    //$qty=$_POST["qty"];
-    echo "SET";
   }else if(isset($_GET['clearAll']) && $_GET['clearAll']=='true')
   {
     unset($_SESSION['cart']);
@@ -28,31 +26,43 @@
 
 <table>
   <?php
-  echo "asd";
-//print_r($_SESSION['cart']);
+
 $totalItems = 0;
+$totalPrice = 0;
 if(isset($_SESSION['cart']))
-echo "<Table border=1 align=center width=60%><tr><th>ID</th><th>OID</th><th>Title</th><th>Quantity</th><th>Price</th></tr>";
+echo "<table class='cartTable' align=center width=60%>
+<tr>
+<th>Image</th>
+<th>ID</th>
+<th>OID</th>
+<th>Title</th>
+<th>Quantity</th>
+<th>Price</th>
+<th>Sub-total</th>
+</tr>";
   foreach($_SESSION['cart'] as $item)
   {
     echo "<tr>";
+  echo "<td><img src=../../media/".$item["Img name"]."></td>";
   echo "<td>".$item["ID"]."</td>";
   echo "<td>".$item["OID"]."</td>";
   echo "<td>".$item["Title"]."</td>";
-    echo "<td>".$item["Qty"]."</td>";
+  echo "<td>".$item["Qty"]."</td>";
   echo "<td>". $item["Price"]."</td>";
+  echo "<td>". $item["Price"]*$item["Qty"]."</td>";
+  $totalPrice += $item["Price"]*$item["Qty"];
   $totalItems++;
-  //print_r($item["OID"]);
-  //print_r($item["Title"]);
     echo "</tr>";
   }
   echo "</table>";
-echo "<h3>No. of Items in Cart $totalItems</h3>";
+echo "<h3>Number of Items in your bag: $totalItems,<br>and total price: $$totalPrice</h3>";
 ?>
- <a href="cart.php?clearAll=true">Clear All</a> 
-</table>
+ 
+
+</table><hr>
 <form method=post action=checkout.php>
-<input type=submit value="CheckOut">
+<input id="cartSub" type=submit value="CheckOut">
+<button id="clr"><a href="cart.php?clearAll=true">Clear All</a></button>
 </form>
   </div> <!--End of bag-->
 

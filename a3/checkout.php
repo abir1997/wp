@@ -96,7 +96,7 @@ if(isset($_POST["validate"]))
         */
       }
   if($isError==false)
-  {
+  { // If there are no errors proceed to receipt page.
       $_SESSION["cname"]=$name;
       $_SESSION["address"]=$address;
       $_SESSION["phone"]=$phone;
@@ -114,23 +114,25 @@ if(isset($_POST["validate"]))
         <form action = "checkout.php" method="POST">
         <input type="hidden" value="1" name="validate">
         <label for="name">Name</label>
-        <input type="text" id="name" name="name" placeholder="Jon Doe">
         <span class="error">* <?php echo $nameError;?></span>
+        <input type="text" id="name" name="name" placeholder="Jon Doe">
+        <span class="error">* <?php echo $emailError;?></span>
         <label for="email">E-mail</label>
         <input type="text" id="email" name="email" placeholder="yourName@xyz.com">
-        <span class="error">* <?php echo $emailError;?></span>
+        <span class="error">* <?php echo $addressError;?></span>
         <label for="address">Address</label><br>
         <textarea rows="4" cols="100" name="address" placeholder="44 street name,Suburb,State,Country"></textarea>
-        <span class="error">* <?php echo $addressError;?></span>
+        <span class="error">* <?php echo $phoneError;?></span>
         <label for="number">Phone number</label>
         <input type="text" id="number" name="number" placeholder="+614XXXXXXXX">
-        <span class="error">* <?php echo $phoneError;?></span>
-        <label for="card">Credit Card</label>
-        <input type="text" id="card" name="card" placeholder="1234-5678-9101">
         <span class="error">* <?php echo $cardError;?></span>
+        <label for="card">Credit Card</label>
+        <img src="../../media/visa.png" id="visaLogo">
+        <input oninput="showVisa();" type="text" id="card" name="card" placeholder="1234-5678-9101"> <!--Show visa logo on valid visa card input-->
+        <span class="error">* <?php echo $expiryError;?></span>
         <label for="expiry">Expiry date</label>
         <input type="date" id="expiry" name="expiry">
-        <span class="error">* <?php echo $expiryError;?></span>
+        
         <input type="submit" value="Submit">
 
         

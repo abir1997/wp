@@ -5,11 +5,23 @@
   topModule('receipt');
 ?>
 <?php
-    echo "Order Complete";
+    echo "<h2 class='text-center'>Order Complete. You will receiver your items soon.Thank you for shopping with CottonLab.</h2>";
     if(isset($_SESSION['cart']))
     {
         $ordersFile = fopen("orders.txt", "a") or die("Unable to open file!");
-        echo "<Table border=1 align=center width=60%><tr><th>OrderDate</th><th>Name</th><th>Address</th><th>Phone</th><th>Email</th><th>ID</th><th>OID</th><th>Quantity</th><th>Price</th><th>Subtotal</th></tr>";
+        echo "<table class='rTable' align=center width=60%>
+        <tr>
+        <th>OrderDate</th>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Phone</th>
+        <th>Email</th>
+        <th>ID</th>
+        <th>OID</th>
+        <th>Quantity</th>
+        <th>Price</th>
+        <th>Subtotal</th>
+        </tr>";
         foreach($_SESSION['cart'] as $item)
         {
             echo "<tr>";
@@ -36,9 +48,12 @@
             echo "<td>".$item["Qty"]."</td>";
             echo "<td>". $item["Price"]."</td>";
             echo "<td>". $subtotal ."</td>";
-              echo "</tr>";
+            echo "</tr>";
               fputcsv($ordersFile, $final_order, "\t");   
         }
         echo "</table>";
     }
+
+    unset($_SESSION['cart']);
+    footer();
 ?>

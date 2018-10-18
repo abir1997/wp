@@ -5,13 +5,8 @@ function plusValue() {
     value = isNaN(value) ? 0 : value;
     value++
     document.getElementById("qty").value = value;
-    updatePrice("Increment");
+    updatePrice();
 
-    // var qty = document.getElementById("qty").value;
-
-    // var price = document.getElementById("price").innerHTML;
-
-    // document.getElementById("subtotal").innerHTML = qty * price;
 
 }
 
@@ -21,7 +16,7 @@ function minusValue() {
     value--;
     document.getElementById("qty").value = value;
 
-   updatePrice(decrement);
+   updatePrice();
 
 
 }
@@ -42,16 +37,27 @@ function myFunction() {
     }
 }
 
-function updatePrice(i) {
+function updatePrice() {
 
-    var element = document.getElementById("price");
-    if (i === "Increment") {
-        var p = parseInt(element.getAttribute("value"), 10) * value;
-        element.setAttribute("value", p);
-        element.innerHTML = p;
-    } else {
-        var p = parseInt(element.getAttribute("value"), 10) / value;
-        element.setAttribute("value", p);
-        element.innerHTML = p;
-    }
+    var qty=document.getElementById("qty").value;
+	
+	var price =document.getElementById("price").innerHTML;
+	var subtotal=qty*price;
+	
+	 document.getElementById("subtotal").innerHTML ="$"+subtotal.toFixed(2);
+}
+
+function showVisa()
+{
+    var value = document.getElementById('card').value;
+	value = value.replace(/ /g,'');
+	var pattern = new RegExp("^4[0-9]{12,15}$");
+	var result = pattern.test(value);
+	
+	if(result==true) {
+		document.getElementById('visaLogo').style.visibility = "visible";
+	}
+	else {
+		document.getElementById('visaLogo').style.visibility = "hidden";
+	}
 }
