@@ -446,52 +446,50 @@ h1 {
     box-sizing: border-box;
 }
 
-.cartTable img {
+.cartTable img{
     height: 100px;
 }
 
-.error {
-    color: red;
+.error{
+    color:red;
 }
 
-.text-center {
+.text-center{
     text-align: center;
 }
 
-.bag {
+.bag{
     text-align: center;
-    width: 80%;
+    width:80%;
     margin: 0 auto;
 }
 
-.bag th,
-tr {
+.bag th,tr{
     background-color: whitesmoke;
 }
 
-#cartSub {
+#cartSub{
     width: 50%;
 }
 
-#clr {
+#clr{
     padding: 14px 20px;
     margin: 8px 0;
     border: none;
-    cursor: pointer;
+    cursor: pointer; 
 }
 
-#visaLogo {
+#visaLogo{
     visibility: hidden;
     width: 35px;
     height: 34px;
 }
 
-#rTable {
+#rTable{
     background-color: whitesmoke;
 }
 
-#rTable th,
-td {
+#rTable th, td {
     padding: 15px;
     text-align: left;
 }

@@ -16,14 +16,16 @@
     unset($_SESSION['cart']);
     
     header('Location: products.php');
+  }else{
+    echo "Nothing in bag";
   }
 ?>
 
 <div class="bag">
-  <h1> Your bag </h1>
+<h1> Your bag </h1>
 
-  <table>
-    <?php
+<table>
+  <?php
 
 $totalItems = 0;
 $totalPrice = 0;
@@ -55,16 +57,14 @@ echo "<table class='cartTable' align=center width=60%>
   echo "</table>";
 echo "<h3>Number of Items in your bag: $totalItems,<br>and total price: $$totalPrice</h3>";
 ?>
+ 
 
-
-  </table>
-  <hr>
-  <form method=post action=checkout.php>
-    <input id="cartSub" type=submit value="CheckOut">
-    <button id="clr"><a href="cart.php?clearAll=true">Clear All</a></button>
-  </form>
-</div>
-<!--End of bag-->
+</table><hr>
+<form method=post action=checkout.php>
+<input id="cartSub" type=submit value="CheckOut">
+<button id="clr"><a href="cart.php?clearAll=true">Clear All</a></button>
+</form>
+  </div> <!--End of bag-->
 
 
 <?php
